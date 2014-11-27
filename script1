@@ -1,0 +1,16 @@
+#!/bin/bash 
+# script1
+#lab 4 script1
+# kingj
+echo "Enter your first name: "
+read NAME1
+echo "Enter your first number: "
+read NUM1
+echo "Enter your second number: "
+read NUM2
+SUM=$((NUM1+NUM2))
+SEC=$(date +%s)
+
+echo "Hello "  $NAME1 "your sum is: " $SUM
+echo $SEC $NAME1 $SUM "<br>" >> script1.log
+

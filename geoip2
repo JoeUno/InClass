@@ -1,0 +1,11 @@
+#!/bin/bash
+#geoip2
+#
+
+ipaddr=$(cat ip.1st)
+
+for x in $ipaddr
+do
+echo $(curl -s http://freegeoip.net/csv/$x) >> ip_latlong.log
+done
+

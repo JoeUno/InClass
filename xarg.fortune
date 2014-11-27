@@ -1,0 +1,14 @@
+#!/bin/bash
+# xargs.fortune
+
+# send a random fortune - to each logged in user.
+
+# USRLST
+
+USRLST=$( who | awk ' {print $1}' | sort | uniq)
+
+for x in $USRLST
+do
+ fortune | mail $x -s"Fortune for $(date)"
+done
+

@@ -1,0 +1,4 @@
+export HDR="<html><head><title>Timesheet</title></head><body>"
+export FTR="</body></html>"
+export HTMLDIR=$(echo ~/public_html)
+echo $HDR $(cat script1.log) $FTR > $HTMLDIR/timesheet.html
